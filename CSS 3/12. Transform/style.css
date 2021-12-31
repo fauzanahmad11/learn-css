@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 70px;
+    font-family: "altoys_just_personal_onlyIt", arial;
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+}
+
+body {
+    background-image: url(webb.png);
+    text-align: center;
+}
+
+/* 
+-webkit- (Chrome, Safari, Operasi versi terbaru)
+-moz- (firefox)
+-ms- (internet explorer)
+-o- (operas versi terbaru)
+*/
+
+/* 
+transform properti value:
+scale(angka), scaleX(angka), scaleY(angka) = memperbesar/kecil
+rotate(deg), rotateX(deg), rotateY(deg) = memutar
+skew(deg), skewX(deg), skewY(deg) = membuat condong/miring
+translate(px), translateX(px), translateY(px) = mengubah posisi
+*/
+
+img {
+    width: 400px;
+    transition: 1s ease all;
+}
+
+img:hover {
+    /* transform: rotate(18000deg) rotateX(18000deg) rotateY(18000deg); */
+    transform: skew(10deg);
+}
+
+.kotak {
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(227, 231, 0);
+    line-height: 400px;
+    text-transform: uppercase;
+    transition: 1s ease all;
+}
+
+.kotak:hover {
+    transform: rotate(18000deg) rotateX(18000deg) rotateY(18000deg);
+    transform: translate(-20px, -60px);
+}

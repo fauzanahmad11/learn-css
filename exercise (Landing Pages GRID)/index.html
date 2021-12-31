@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZWORLD Dealer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Start Header -->
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">Zanworld Dealer</h2>
+                <p class="sub-heading">Motorcycle & Accesories</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">$ 50K</h4>
+                <p class="item">Roadster</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">$ 60K</h4>
+                <p class="item">Chooper</p>
+            </div>
+        </header>
+        <!-- END Header -->
+        <!-- Start NAV -->
+        <nav class="menu">
+            <div class="nav-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>ZANWORLD</h1>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-items"><a href="#" class="link-menu">Home</a></li>
+                <li class="menu-items"><a href="#" class="link-menu">Products</a></li>
+                <li class="menu-items"><a href="#" class="link-menu">About</a></li>
+                <li class="menu-items"><a href="#" class="link-menu">Gallery</a></li>
+            </ul>
+        </nav>
+        <!-- END NAV -->
+        <!-- Start Services -->
+        <section class="services">
+            <div class="service">
+                <div class="icon">*</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illo quisquam perferendis quod
+                    laudantium adipisci. Autem laborum ipsa provident voluptate et. Ea sint illo illum. Veritatis magni
+                    esse magnam architecto.</p>
+            </div>
+            <div class="service">
+                <div class="icon">$</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illo quisquam perferendis quod
+                    laudantium adipisci. Autem laborum ipsa provident voluptate et. Ea sint illo illum. Veritatis magni
+                    esse magnam architecto.</p>
+            </div>
+            <div class="service">
+                <div class="icon">%</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illo quisquam perferendis quod
+                    laudantium adipisci. Autem laborum ipsa provident voluptate et. Ea sint illo illum. Veritatis magni
+                    esse magnam architecto.</p>
+            </div>
+            <div class="service">
+                <div class="icon">%</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illo quisquam perferendis quod
+                    laudantium adipisci. Autem laborum ipsa provident voluptate et. Ea sint illo illum. Veritatis magni
+                    esse magnam architecto.</p>
+            </div>
+        </section>
+        <!-- END Services -->
+        <!-- Start gallery -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <img src="img/img1.jpg" alt="">
+            <img src="img/img2.jpg" alt="">
+            <img src="img/img3.jpg" alt="">
+            <img src="img/img4.jpg" alt="">
+            <img src="img/img5.jpg" alt="">
+        </section>
+        <!-- END gallery -->
+        <!-- Start Footer -->
+        <!-- END Footer -->
+    </div>
+    <script>
+        const getToggle = document.querySelector(".nav-toggle input");
+        const getNav = document.querySelector("ul.menu-list");
+
+        getToggle.addEventListener('click', () => {
+            getNav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

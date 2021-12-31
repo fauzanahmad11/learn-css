@@ -1,0 +1,24 @@
+.container {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.item {
+    width: 100%;
+    background-color: rgb(138, 209, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.item:nth-child(even) {
+    background-color: rgb(254, 138, 148);
+}
+
+* {
+    box-sizing: border-box;
+}

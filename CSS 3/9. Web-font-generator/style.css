@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 70px;
+    font-family: "altoys_just_personal_onlyIt", arial;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('font/Quicksand-BoldItalic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ambleregular';
+    src: url('font/Amble-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('font/roboto-bold-webfont.woff2') format('woff2'),
+        url('font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'altoys_just_personal_onlyIt';
+    src: url('font/altoysjustpersonalonlyitalic-elxz-webfont.woff2') format('woff2'),
+        url('font/altoysjustpersonalonlyitalic-elxz-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+}
+
+body {
+    background-image: url(webb.png);
+}

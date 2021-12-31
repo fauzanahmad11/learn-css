@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "altoys_just_personal_onlyIt", arial;
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+}
+
+body {
+    background-image: url(webb.png);
+    text-align: center;
+}
+
+/* 
+-webkit- (Chrome, Safari, Operasi versi terbaru)
+-moz- (firefox)
+-ms- (internet explorer)
+-o- (operas versi terbaru)
+*/
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 208, 0);
+    font-weight: bolder;
+    font-size: 10px;
+    line-height: 300px;
+    margin-bottom: 5px;
+}
+
+/* 
+animations value
+animation: 
+[name][duration][timing-function]
+[delay][iteration-count][direction]
+[fill-mode][play-state]
+*/
+
+/* 
+@keyframes [name] {
+    from{
+        [property-css]
+    }
+    to{
+        [property-css]
+    }
+}
+*/
+@keyframes boxAnimasi {
+    0% {
+        width: 300px;
+    }
+
+    50% {
+        width: 100%;
+        height: 300px;
+        font-size: 10px;
+        /* transform: translateX(200px); */
+    }
+
+    100% {
+        width: 100%;
+        height: 500px;
+        line-height: 500px;
+        font-size: 50px;
+        /* transform: translateX(-200px) translateY(500px); */
+    }
+}
+
+.box {
+    /* 
+    - infinite merupakan value dari animation-iteration-count: ;
+    infinite = animasi akan berulang terus menerus
+    bisa juga menggunakan angka
+    - alternate merupakan value dari [direction]
+    - forwards merupakan value dari [fill-mode], beriku macam2 valuenya
+        none, forwards, backwards, both
+    - [play-state] memiliki value = running, paused
+    */
+    animation: boxAnimasi 2s ease 3 alternate forwards paused;
+}

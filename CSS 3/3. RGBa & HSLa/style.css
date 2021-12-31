@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+}
+
+body {
+    background-image: url(webb.png);
+}
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(250, 128, 114, 0.555);
+    /* atau background-color: hsl(00, 80%, 63%); hsla*/
+    transition: 0.5s ease all;
+}

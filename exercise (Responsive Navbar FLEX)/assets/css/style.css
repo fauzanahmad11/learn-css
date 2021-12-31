@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "robotoregular", cursive;
+    color: rgb(59, 59, 59);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px ;
+    align-items: center;
+    /* padding: 20px; */
+    height: 50px;
+    background-color: rgb(230, 153, 11);
+}
+
+.logo {
+    font-family: sans-serif;
+}
+
+ul.nav-menu {
+    list-style: none;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+li.nav-items a {
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    font-size: 0.75em;
+    font-weight: 650;
+}
+
+/* nav toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* humburger menu animation */
+.nav-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.nav-toggle input[type="checkbox"]:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.nav-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.nav-toggle input[type="checkbox"]:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.nav-toggle input[type="checkbox"]:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(59, 59, 59);
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+/* responsive breakpoint */
+/* tablet */
+@media screen and (max-width: 768px) {
+    ul.nav-menu {
+        width: 50%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    ul.nav-menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgb(230, 153, 11);
+        height: 70%;
+        overflow-Y: auto;
+        overflow-X: hidden;
+        /* height: 100vh; */
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+        /* z-index: -1; */
+        width: 100%;
+        transform: translateX(100%);
+        transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+        opacity: 0;
+        margin-top: 50px;
+        filter: drop-shadow(0 10px 5px rgba(0, 0, 0, .1));
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    ul.nav-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    ul.nav-menu li.nav-items a {
+        width: 100%;
+        display: block;
+        padding: 50px 500px;
+    }
+
+    ul.nav-menu li.nav-items a:hover {
+        background-color: rgba(255, 255, 255, 0.377);
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    /* scrooll */
+
+    /* width */
+    ul.nav-menu::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    /* Track */
+    ul.nav-menu::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, .2);
+        border-bottom-right-radius: 10px;
+        position: relative;
+        background-color: rgb(230, 153, 11);
+    }
+
+    /* Handle */
+    ul.nav-menu::-webkit-scrollbar-thumb {
+        background: rgb(197, 131, 7);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 30px;
+    }
+
+    /* Handle on hover */
+    ul.nav-menu::-webkit-scrollbar-thumb:hover {
+        background: rgb(59, 59, 59);
+    }
+
+}
+
+/* content */
+.content {
+    background-color: rgb(90, 90, 90);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url(../font/roboto-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dancing_regular';
+    src: url(../font/dancingscript-variablefont_wght-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

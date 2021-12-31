@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.woff2') format('woff2');
+}
+
+
+body {
+    font: 18px/36px 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    background-color: #eeb736;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    margin: 50px 0;
+    /* text-shadow: 0 1px 0 rgb(85, 85, 85), 0 2px 0 rgb(85, 85, 85), 0 3px 0 rgb(85, 85, 85), 0 4px 0 rgb(85, 85, 85); */
+    text-shadow: 1px 1px 0 rgb(221, 220, 220);
+}
+
+.container {
+    width: 80%;
+    background-color: #f3c355;
+    padding: 30px 0;
+    margin: auto;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.144);
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    /*     overflow: hidden; */
+    border: 5px solid #f8d88c;
+    display: inline-block;
+    margin: 10px 10px;
+    position: relative;
+}
+
+.gallery li a img,
+.gallery li a .title {
+    border-radius: 10px;
+}
+
+.gallery li a .title {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 120px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+.gallery li a:hover .title {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ======================================overlay====================================== */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .5s ease-in-out;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.gallery .overlay img {
+    max-height: 100%;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+/* 
+animations value
+animation: 
+[name][duration][timing-function]
+[delay][iteration-count][direction]
+[fill-mode][play-state]
+*/
+.overlay:target img {
+    animation: zoomFade .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+/* animasi */
+@keyframes zoomFade {
+    0% {
+        /* transform: scale(0); */
+        opacity: 0;
+    }
+
+    100% {
+        /* transform: scale(1); */
+        opacity: 1;
+    }
+}
+
+.gallery .overlay a.close span {
+    padding: 4px 10px;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 50%;
+    color: blanchedalmond;
+}
+
+.gallery .overlay a.close {
+    position: absolute;
+    top: 85px;
+    right: 37%;
+    opacity: 0;
+}
+
+.gallery .overlay:target a.close {
+    /* forwards membuat animasi berhenti di nilai pertama */
+    animation: zoomFade .3s cubic-bezier(0.6, -0.28, 0.735, 0.045) .2s forwards;
+}
+
+.next {
+    position: absolute;
+    top: 45%;
+    bottom: 50%;
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.384);
+    transition: .1s ease-in;
+    opacity: 0;
+}
+
+.next:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    position: absolute;
+    top: 45%;
+    bottom: 50%;
+    margin-left: -52px;
+    color: rgba(255, 255, 255, 0.384);
+    transition: .1s ease-in;
+    opacity: 0;
+}
+
+.prev:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.overlay:target .next,
+.overlay:target .prev,
+.overlay:target .socialMedia {
+    animation: zoomFade .3s ease .2s forwards;
+}
+
+.socialMedia {
+    opacity: 0;
+}
+
+.whatsapp {
+    background-color: #f3c355;
+    padding: 10px 97px;
+}

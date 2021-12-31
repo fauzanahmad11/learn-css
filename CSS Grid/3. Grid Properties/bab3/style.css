@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    border: 5px solid orange;
+}
+
+.item {
+    background-color: rgb(248, 71, 1);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.item:nth-child(even) {
+    background-color: rgb(255, 106, 46);
+}

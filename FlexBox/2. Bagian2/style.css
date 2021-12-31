@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+/* Latihan Satu */
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.cart {
+    padding: 20px;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.cart.layanan1 {
+    background-color: #5D44F8;
+}
+
+.cart.layanan2 {
+    background-color: #F7BD4B;
+}
+
+.cart.layanan3 {
+    background-color: #5D44F8;
+}
+
+/* Latihan 3 */
+
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 45%;
+    margin: 10px 10px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+/* Latihan 4 */
+.container-empat {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.container-empat .card {
+    border: 1px solid #999;
+    border-radius: 20px;
+    background-color: #4731D3;
+    margin: 10px;
+    flex: 1;
+}
+
+.container-empat .card.card-xl {
+    transform: scale(1.11);
+}
+
+.container-empat .card .header {
+    padding: 30px 15px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.container-empat .card .body {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.container-empat .card .footer {
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.container-empat .card .footer button {
+    background-color: #F7BD4B;
+    border: none;
+    font-weight: bolder;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+/* Latihan 5 */
+.container-lima {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px solid black;
+    display: flex;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    margin: auto;
+    display: flex;
+}
+
+.kotak * {
+    margin: auto;
+}
+
+/* Responsive */
+@media(min-width:600px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart {
+        width: 30%;
+        text-align: center;
+    }
+
+    .thumbnail {
+        width: 20%;
+        margin: 10px 10px;
+    }
+
+}

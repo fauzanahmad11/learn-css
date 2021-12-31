@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 70px;
+    font-family: "altoys_just_personal_onlyIt", arial;
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+}
+
+body {
+    background-image: url(webb.png);
+    text-align: center;
+}
+
+/* 
+-webkit- (Chrome, Safari, Operasi versi terbaru)
+-moz- (firefox)
+-ms- (internet explorer)
+-o- (operas versi terbaru)
+*/
+
+img {
+    width: 400px;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
